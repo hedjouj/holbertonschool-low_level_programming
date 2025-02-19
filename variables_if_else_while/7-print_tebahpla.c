@@ -6,14 +6,11 @@
 
 int main(void)
 {
-	char ch;
-
-	for (ch = 'a'; (ch <= 'z'); ch++)
-{
-	if (ch <= 'z') ch = 'z' - (ch - 'a');
-	else if ((ch = 'z' - (ch - 'a')))
-	putchar(ch);
+	char letter;
+	{
+		for (letter = 'z' ; letter >= 'a' ; letter--)
+		putchar(letter);
+	}
 	putchar('\n');
-}
 	return (0);
 }
