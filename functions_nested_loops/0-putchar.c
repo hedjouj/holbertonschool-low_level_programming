@@ -1,7 +1,10 @@
 #include "main.h"
 #include <stdio.h>
-/*
+
+/**
+ * main - Printsf a specific character
  *
+ * Return: Always (Success)
  */
 
 int main(void)
