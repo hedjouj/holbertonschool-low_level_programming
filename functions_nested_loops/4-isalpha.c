@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _isalpha - Entry point
- *@c: caract√re a controler 
+ *@c: caract√re a controler
  * Return: Always 0 (Success)
  */
 
