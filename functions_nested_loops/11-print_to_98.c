@@ -3,7 +3,7 @@
 
 /**
 * print_to_98 - Prints all number from n to nineeight
-* @n: The first number 
+* @n: The first number
  */
 void print_to_98(int n)
 {
