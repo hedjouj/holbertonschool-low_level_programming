@@ -3,22 +3,34 @@
 
 /**
  * rev_string - reverse the string
- * @s: the pointer
+ * @s: the sstring we want to reverse
  */
 
 void rev_string(char *s)
 {
-	int l = 0;
-	int r = strlen(s) - 1;
-	char t;
+	int i = 0;
+	int length = 0;
+	int j = length - 1;
 
-	while (l < r)
+
+	if (s == NULL)
 	{
-		t = s[l];
-		s[l] = s[r];
-		s[r] = t;
+		return;
+	}
 
-		l++;
-		r--;
+
+	while (s[length] != '\0')
+	{
+		length++;
+	}
+	while (i < j)
+	{
+		char temp = s[i];
+
+		s[i] = s[j];
+		s[j] = temp;
+
+		i++;
+		j--;
 	}
 }
