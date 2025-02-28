@@ -11,8 +11,6 @@ void puts2(char *str)
 	int i;
 
 
-	str = "0123456789";
-
 	for (i = 0; str[i] != '\0'; i += 2)
 	{
 		_putchar(str[i]);
