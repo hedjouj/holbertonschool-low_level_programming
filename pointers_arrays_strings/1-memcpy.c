@@ -1,7 +1,13 @@
 #include "main.h"
 
 /**
- *_memcpy - copie the memory area
+ * _memcpy - check the code
+ *
+ * @dest: The character to print
+ * @src: The character to print
+ * @n: The character to print
+ *
+ * Return: character.
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
