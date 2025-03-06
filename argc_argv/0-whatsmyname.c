@@ -1,8 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - check the code
+ * main - Entry point
  *@argc: agument
  *@argv: arguments
+ *Return: always 0
  */
 
 int main(int argc, char *argv[])
