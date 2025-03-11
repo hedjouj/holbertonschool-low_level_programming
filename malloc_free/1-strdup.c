@@ -5,8 +5,8 @@
 /**
  * _strdup - duplicate a string
  *@str: character to copy
- *
- * Return - null or pointer
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 
 char *_strdup(char *str)
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	{
 	}
 
-	copy = malloc(sizeof(char) * j +1);
+	copy = malloc(sizeof(char) * j + 1);
 	if (copy == NULL)
 	{
 		return (NULL);
