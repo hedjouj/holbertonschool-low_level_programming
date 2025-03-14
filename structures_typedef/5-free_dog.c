@@ -9,7 +9,7 @@
  * It takes a pointer to the dog structure as its parameter.
  */
 
-void free_dog(dog_t*d)
+void free_dog(dog_t *d)
 {
 	if (d == NULL)
 	{
