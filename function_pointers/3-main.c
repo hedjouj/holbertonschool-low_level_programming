@@ -3,7 +3,7 @@
 #include "3-calc.h"
 
 /**
- * main - Performs simple operations (addition, subtraction, multiplication,
+ * main - Performs simple operations
  *        division, and modulo) based on user input.
  * @argc: The number of arguments passed to the program.
  * @argv: An array of strings containing the arguments.
@@ -18,8 +18,7 @@ int main(int argc, char *argv[])
 	int result;
 	int (*fonction)(int, int);
 
-
-	if (argc != 4) 
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
