@@ -4,10 +4,10 @@
  * print_char - prints any given char
  * @args: argument
  */
-
 void print_char(va_list *args)
 {
-	int character = va_arg(*args,int);
+	int character = va_arg(*args, int);
+
 	printf("%c", character);
 }
 
@@ -34,29 +34,27 @@ void print_float(va_list *args)
 }
 
 /**
- * print_string - prints any string
+ * print_string - prints any given string
  * @args: argument
  */
 void print_string(va_list *args)
 {
 	char *string = va_arg(*args, char *);
+
 	printf("%s", string);
 }
 
 /**
- * print_all - print everything it reveive as arguments
+ * print_all - prints everything it receives as arguments
  * @format: list of types as string
  */
-
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	unsigned int j = 0;
 	char *separator = "";
 	va_list args;
-
-
-	function_t function[] = {
+	function_t functions[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
@@ -66,23 +64,30 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
+	/* Going through each character of format */
 	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 
-		while (function[j].id != '\0')
-			if (format[i] == function[j].id)
+		/* Going through each id of functions */
+		while (functions[j].id != '\0')
+		{
+			/* Getting the matching function */
+			if (format[i] == functions[j].id)
 			{
 				printf("%s", separator);
 				separator = ", ";
-				function[j].fptr(&args);
+				functions[j].fptr(&args);
 				break;
 			}
 
-		j++;
+			j++;
+		}
+
+		i++;
 	}
-	i++;
 
 	va_end(args);
+
 	printf("\n");
 }
