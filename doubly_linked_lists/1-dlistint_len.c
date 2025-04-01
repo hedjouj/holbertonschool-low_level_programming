@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_dlistint - Prints all the elements of a doubly linked list.
+ * dlistint_len - afficher la lenght de la liste
  * @h: A pointer to the head of the doubly linked list.
  *
  * Description: This function prints all the elements of a doubly linked list
