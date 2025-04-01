@@ -15,6 +15,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *dernier_noeud;
+	list_t *current = *head;
 	int count = 0, i;
 	char *duplique;
 
@@ -35,7 +36,18 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	dernier_noeud->str = duplique;
 	dernier_noeud->len = count;
-	dernier_noeud->next = *head;
-	*head = dernier_noeud;
+	dernier_noeud->next = NULL;
+	if (*head == NULL)
+	{
+		*head = dernier_noeud;
+	}
+	else
+	{
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+		current->next = dernier_noeud;
+	}
 	return (dernier_noeud);
 }
