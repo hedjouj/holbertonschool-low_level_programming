@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
  * add_node - ajoute un noeud au dÃbut
- * @h: A pointer to the head of the linked list
- *
+ *@head: the beginning of the list
+ *@str: string
  * Return: the new node
  */
 
