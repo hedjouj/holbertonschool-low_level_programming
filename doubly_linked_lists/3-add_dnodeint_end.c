@@ -2,6 +2,7 @@
 /**
  * add_dnodeint_end - Adds a new node at the end of a double linked list
  * @head: A pointer to a pointer to the head of the linked list
+ * @n: sontant integers
  *
  * Return: A pointer to the newly created node
  *
