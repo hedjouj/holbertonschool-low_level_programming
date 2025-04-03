@@ -5,7 +5,7 @@
  * @idx: the index of the list where the new node will be added
  * @n: the data to be stored in the new node
  *
- * Return: if the function fail return null 
+ * Return: if the function fail return null
  * or a pointer to the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
@@ -22,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (nouveau_noeud == NULL)
 		return (NULL);
 	nouveau_noeud->n = n;
-	if (*h == NULL|| idx == 0)
+	if (*h == NULL || idx == 0)
 	{
 		nouveau_noeud->prev = NULL;
 		nouveau_noeud->next = *h;
